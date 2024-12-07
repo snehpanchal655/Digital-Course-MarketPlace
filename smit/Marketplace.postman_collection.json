@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "af31b868-ba90-4db9-a5ea-3f8ef38f2682",
+		"name": "Marketplace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"sneh@example.com\",\n  \"password\": \"password\",\n  \"role\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http:localhost:8080/api/v1/signup",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"sneh@example.com\",\n  \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http:localhost:8080/api/v1/login",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create a course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Course Title\",\n    \"description\": \"Course Description\",\n    \"price\": 100.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http:localhost:8080/api/v1/course",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:localhost:8080/api/v1/course",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"course"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all courses search param",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:localhost:8080/api/v1/course?title=sa&description=sa",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"course"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "sa"
+						},
+						{
+							"key": "description",
+							"value": "sa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy a course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:localhost:8080/api/v1/buy/course/:id",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"buy",
+						"course",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:localhost:8080/api/v1/user",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of courses bought and amount paid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http:localhost:8080/api/v1/stats",
+					"host": [
+						"http:localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
